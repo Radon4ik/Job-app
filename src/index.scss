@@ -1,0 +1,174 @@
+@mixin gradient-text() {
+  background-image: radial-gradient(
+      circle at top left,
+      rgba(62, 78, 135, 0.49),
+      transparent 40%
+    ),
+    radial-gradient(
+      circle at top right,
+      rgba(127, 195, 65, 0.5),
+      transparent 40%
+    ),
+    radial-gradient(at bottom left, rgba(255, 0, 255, 0.5), transparent 100%),
+    radial-gradient(at bottom right, rgba(255, 100, 100, 0.5), transparent 100%);
+  color: transparent;
+  -webkit-background-clip: text;
+}
+
+@mixin gradient-dark-text() {
+  background-image: radial-gradient(
+      circle at top left,
+      rgba(66, 83, 144, 0.89),
+      transparent 40%
+    ),
+    radial-gradient(
+      circle at top right,
+      rgba(127, 195, 65, 0.88),
+      transparent 40%
+    ),
+    radial-gradient(at bottom left, rgba(255, 0, 255, 0.88), transparent 100%),
+    radial-gradient(at bottom right, rgba(255, 100, 100, 0.9), transparent 100%);
+  color: transparent;
+  -webkit-background-clip: text;
+}
+
+@mixin main-gradient() {
+  background-image: linear-gradient(to left, aqua, aquamarine);
+}
+
+@mixin disable-gradient() {
+  -webkit-background-clip: unset;
+  color: white;
+}
+
+@keyframes blink {
+  from {
+    @include gradient-text;
+  }
+  to {
+    @include gradient-dark-text;
+  }
+}
+
+body,
+html,
+ul,
+li,
+p,
+h1,
+h2 {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  font-family: monospace;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+main {
+  flex-grow: 1;
+}
+
+.container {
+  width: 85%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.header {
+  @include main-gradient;
+  padding: 20px 0;
+
+  > div {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+
+.logo {
+  @include gradient-text;
+  font-size: 48px;
+  font-weight: bold;
+  transition: all 0.3s;
+
+  &:hover {
+    @include disable-gradient;
+  }
+}
+
+.nav-list {
+  display: flex;
+  gap: 40px;
+}
+
+.nav-list__item a {
+  font-size: 36px;
+  transition: all 0.3s;
+
+  &:hover {
+    @include gradient-text;
+    @include disable-gradient;
+  }
+}
+
+.posts {
+  padding: 20px 0;
+}
+
+h1 {
+  font-size: 64px;
+  @include gradient-text;
+  transition: all 0.3s;
+  animation-name: blink;
+  animation-duration: 1s;
+  animation-iteration-count: infinite;
+  animation-fill-mode: both;
+}
+
+.list {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+  padding: 20px 0;
+}
+
+.list__item {
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+
+  h2 {
+    font-family: cursive;
+    margin-bottom: 20px;
+    flex-grow: 1;
+  }
+
+  p {
+    font-size: 18px;
+  }
+}
+
+.footer {
+  @include main-gradient;
+  padding: 30px 0;
+
+  > div {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+.copyright {
+  align-self: center;
+  font-size: 28px;
+}
