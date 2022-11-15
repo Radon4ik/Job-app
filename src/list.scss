@@ -1,0 +1,157 @@
+@import 'custom-media.scss';
+
+.jobs {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  row-gap: 8px;
+}
+
+.jobs__item {
+  width: 1400px;
+  padding: 24px 16px;
+  border-radius: 8px;
+  display: flex;
+  gap: 26px;
+  align-items: center;
+  background-color: #ffffff;
+  box-shadow: 2px 1px 7px rgba(0, 0, 0, 0.08),
+    0px 2px 1px -1px rgba(0, 0, 0, 0.04), 0px 1px 3px rgba(0, 0, 0, 0.12);
+
+  @include media-1400 {
+    width: 100%;
+    @include padding(20px, 10px);
+  }
+  @include media-1200 {
+    @include padding(10px, 10px);
+  }
+}
+
+.jobs__content {
+  width: 100%;
+  height: auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  @include media-1200 {
+    height: auto;
+    flex-wrap: wrap;
+    column-gap: 100px;
+    row-gap: 17px;
+  }
+
+  @include media-500 {
+    column-gap: 10px;
+    justify-content: space-between;
+  }
+}
+
+.jobs__wrapper {
+  width: 100px;
+  height: 100px;
+}
+
+.jobs__img-box {
+  width: 85px;
+  height: 85px;
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+.jobs__img {
+  height: auto;
+  width: 100%;
+}
+
+.jobs__text-box {
+  flex-grow: 1;
+  @include media-1200 {
+    width: 100%;
+  }
+}
+
+.jobs__title {
+  font-weight: 700;
+  font-size: 2rem;
+  line-height: 1.25;
+  letter-spacing: -0.625px;
+  color: #3a4562;
+  margin-bottom: 8px;
+
+  @include media-1200 {
+    font-size: 1.8rem;
+    line-height: 1.33;
+    letter-spacing: -0.5625px;
+  }
+}
+
+.job__name,
+.job__address {
+  font-size: 1.6rem;
+  line-height: 1.56;
+  letter-spacing: 0.23619px;
+  color: #878d9d;
+  margin-bottom: 8px;
+
+  @include media-1200 {
+    font-size: 1.6rem;
+    line-height: 1.56;
+    letter-spacing: 0.23619px;
+    color: #878d9d;
+  }
+}
+
+.job__location {
+  margin-right: 8px;
+  padding-bottom: 10px;
+}
+
+.jobs__rating {
+  width: 96px;
+  height: 18px;
+  display: flex;
+
+  @include media-1200 {
+    order: -1;
+  }
+
+  @include media-768 {
+    height: 10px;
+  }
+}
+
+.jobs__rating-img {
+  width: 100%;
+  height: auto;
+}
+
+.jobs__posted {
+  display: flex;
+  flex-direction: column;
+  gap: 65px;
+  width: 138px;
+  height: 116px;
+  align-items: flex-end;
+
+  @include media-1200 {
+    order: -1;
+    height: auto;
+    width: auto;
+  }
+}
+
+.jobs__btn {
+  min-width: 16px;
+  height: 20px;
+  background-color: white;
+  border: none;
+
+  @include media-1200 {
+    display: none;
+  }
+}
+
+.jobs__bookmark {
+  width: 100%;
+}

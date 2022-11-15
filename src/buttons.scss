@@ -1,0 +1,112 @@
+.btn-apply-now {
+  display: inline-block;
+  min-width: 127px;
+  font-weight: 700;
+  font-size: 1.2rem;
+  line-height: 1.3;
+  text-align: center;
+  text-transform: uppercase;
+  color: #ffffff;
+  background-color: #384564;
+  border-radius: 8px;
+  padding: 18px 30px;
+  align-self: flex-start;
+  margin-bottom: 32px;
+
+  @include media-992 {
+    display: none;
+  }
+}
+
+.btn-apply-now-bottom {
+  margin-bottom: 86px;
+
+  @include media-992 {
+    display: inherit;
+  }
+
+  @include media-768 {
+    align-self: center;
+  }
+}
+
+.additional__btn {
+  display: inline-block;
+  min-width: 220px;
+  padding: 17px 73px;
+  margin: 10px 8px;
+  background: rgba(161, 177, 219, 0.317343);
+  border: 1px solid rgba(85, 105, 158, 0.3);
+  border-radius: 8px;
+  font-weight: 700;
+  font-size: 1.6rem;
+  line-height: 1;
+  text-align: center;
+  letter-spacing: -0.457143px;
+  color: #55699e;
+
+  @include media-768 {
+    min-width: 133px;
+    padding: 0;
+    @include padding(17px, 17px);
+  }
+}
+
+.additional_btn-yellow {
+  background: rgba(255, 207, 0, 0.15);
+  border: 1px solid #ffcf00;
+  border-radius: 8px;
+  color: #988b49;
+  margin-bottom: 87px;
+
+  @include media-768 {
+    margin-bottom: 20px;
+    min-width: 121px;
+  }
+}
+
+.additional__btn-return {
+  background: #38456414;
+  border-radius: 8px;
+  mix-blend-mode: normal;
+  min-width: 213px;
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 1.2rem;
+  line-height: 1.33;
+  text-align: center;
+  color: #3a4562;
+  padding: 18px 26px 16px 52px;
+  margin-bottom: 50px;
+  display: inline-block;
+  margin-left: -86px;
+
+  @include media-992 {
+    display: none;
+  }
+}
+
+.header__btn {
+  display: inline-block;
+  font-family: 'Roboto';
+  font-size: 1.8rem;
+  line-height: 1.33;
+  letter-spacing: -0.5625px;
+  color: #3a4562;
+  border: none;
+  background-color: white;
+}
+
+.header__btn-invisible,
+.header__btn-share {
+  font-family: 'Proxima';
+
+  display: inline-block;
+  font-size: 1.6rem;
+  line-height: 1.343;
+  color: #38415dd1;
+  letter-spacing: -0.5px;
+  border: none;
+  background-color: white;
+  min-width: 127px;
+}

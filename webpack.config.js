@@ -8,6 +8,7 @@ module.exports = {
     path: resolve(__dirname, 'build'),
     filename: '[name]-[fullhash].js',
     clean: true,
+    publicPath: '/',
   },
   module: {
     rules: [
@@ -42,9 +43,12 @@ module.exports = {
   ],
   devServer: {
     port: 3000,
+    compress: true,
+    hot: true,
     static: {
       directory: join(__dirname, 'src'),
     },
+    historyApiFallback: true,
   },
   devtool: 'inline-source-map',
 };

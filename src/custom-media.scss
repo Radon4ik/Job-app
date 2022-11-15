@@ -1,0 +1,43 @@
+@mixin media-1600 {
+  @media (max-width: 1600px) {
+    @content;
+  }
+}
+@mixin media-1400 {
+  @media (max-width: 1400px) {
+    @content;
+  }
+}
+@mixin media-1350 {
+  @media (max-width: 1400px) {
+    @content;
+  }
+}
+
+@mixin media-1200 {
+  @media (max-width: 1200px) {
+    @content;
+  }
+}
+
+@mixin media-992 {
+  @media (max-width: 992px) {
+    @content;
+  }
+}
+
+@mixin media-768 {
+  @media (max-width: 768px) {
+    @content;
+  }
+}
+@mixin media-500 {
+  @media (max-width: 500px) {
+    @content;
+  }
+}
+
+@mixin padding($top, $bottom) {
+  padding-top: $top;
+  padding-bottom: $bottom;
+}

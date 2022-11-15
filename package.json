@@ -43,8 +43,10 @@
     "webpack-dev-server": "^4.7.4"
   },
   "dependencies": {
+    "nanoid": "^4.0.0",
     "react": "^18.1.0",
-    "react-dom": "^18.1.0"
+    "react-dom": "^18.1.0",
+    "react-router-dom": "^6.4.3"
   },
   "prettier": {
     "singleQuote": true

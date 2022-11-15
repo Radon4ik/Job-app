@@ -1,0 +1,55 @@
+@import 'custom-media.scss';
+
+@font-face {
+  font-family: Proxima;
+  font-weight: 700;
+  font-style: normal;
+  src: url('fonts/Proxima-Nova-Bold.woff') format('woff');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: Proxima;
+  font-weight: 400;
+  font-style: normal;
+  src: url('fonts/Proxima-Nova-Regular.woff') format('woff');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: roboto;
+  font-weight: 400;
+  font-style: normal;
+  src: url('fonts/Roboto-Regular.woff') format('woff');
+  font-display: swap;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body,
+html {
+  font-family: Proxima, roboto, sans-serif;
+  font-weight: 400;
+  font-size: 10px;
+  scroll-behavior: smooth;
+  color: #3a4562;
+  overflow-x: hidden;
+}
+
+.container {
+  width: 1400px;
+  margin-right: auto;
+  margin-left: auto;
+  padding-left: 100px;
+
+  @include media-992 {
+    width: 90%;
+    padding-left: 50px;
+  }
+  @include media-768 {
+    width: 95%;
+    padding: 0;
+  }
+}
