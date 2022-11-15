@@ -202,18 +202,18 @@ const Details = () => {
             <div className="map__container">
               <h1 className="map__title">Contact</h1>
               <div className="border-bottom"></div>
-              <a
-                className="map__location"
-                target="_blank"
-                href={`https://www.google.com/maps/search/?api=1&query=${location.lat}%2C${location.long}`}
-              >
+              <div className="map__location">
                 <address className="map__wrapper">
                   <h1 className="map__name">
                     Department name.
                     <br />
                     {name}
                   </h1>
-                  <a className="map__address">
+                  <a
+                    target="_blank"
+                    href={`https://www.google.com/maps/search/?api=1&query=${location.lat}%2C${location.long}`}
+                    className="map__address"
+                  >
                     <img className="map__shape" src="/img/Location.svg" />
                     {address}
                   </a>
@@ -222,7 +222,7 @@ const Details = () => {
                   <br />
                   <a className="map__mailto">{email}</a>
                 </address>
-              </a>
+              </div>
             </div>
           </div>
         </section>
