@@ -58,21 +58,21 @@ const Details = () => {
                       <button className="header__btn">
                         <img
                           className="header__img"
-                          src="src/img/Bookmark.svg"
+                          src="../img/Bookmark.svg"
                         />
                         Save to my list
                       </button>
                       <button className="header__btn header__btn--invisible">
                         <img
                           className="header__img"
-                          src="src/img/Star-small.svg"
+                          src="../img/Star-small.svg"
                         />
                         Save to my list
                       </button>
                     </li>
                     <li className="header__item">
                       <button className="header__btn header__btn-share">
-                        <img className="header__img" src="src/img/Share.svg" />
+                        <img className="header__img" src="../img/Share.svg" />
                         Share
                       </button>
                     </li>
@@ -84,14 +84,14 @@ const Details = () => {
                     <button className="header__btn-invisible">
                       <img
                         className="header__img"
-                        src="/src/img/Star-small.svg"
+                        src="../img/Star-small.svg"
                       />
                       Save to my list
                     </button>
                   </li>
                   <li className="header__item">
                     <button className="header__btn-share">
-                      <img className="header__img" src="/src/img/Share.svg" />
+                      <img className="header__img" src="../img/Share.svg" />
                       Share
                     </button>
                   </li>
@@ -220,7 +220,7 @@ const Details = () => {
                     href={`https://www.google.com/maps/search/?api=1&query=${location.lat}%2C${location.long}`}
                     className="map__address"
                   >
-                    <img className="map__shape" src="src/img/Location.svg" />
+                    <img className="map__shape" src="../img/Location.svg" />
                     {address}
                   </a>
                   <br />

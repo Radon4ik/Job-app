@@ -32,20 +32,20 @@ const ListItem = ({
             target="_blank"
             href={`https://www.google.com/maps/search/?api=1&query=${location.lat}%2C${location.long}`}
           >
-            <img className="job__location" src="src/img/LocationList.svg" />
+            <img className="job__location" src="../img/LocationList.svg" />
             {address}
           </a>
         </div>
         <div className="jobs__rating">
-          <img className="jobs__star-rating" src="/dist/src/img/Rating.svg" />
-          <img className="jobs__star-rating" src="src/img/Rating.svg" />
-          <img className="jobs__star-rating" src="src/img/Rating.svg" />
-          <img className="jobs__star-rating" src="src/img/Rating.svg" />
-          <img className="jobs__star-rating" src="src/img/Rating.svg" />
+          <img className="jobs__star-rating" src="../img/Rating.svg" />
+          <img className="jobs__star-rating" src="../img/Rating.svg" />
+          <img className="jobs__star-rating" src="../img/Rating.svg" />
+          <img className="jobs__star-rating" src="../img/Rating.svg" />
+          <img className="jobs__star-rating" src="../img/Rating.svg" />
         </div>
         <div className="jobs__posted">
           <button className="jobs__btn">
-            <img className="jobs__bookmark" src="src/img/Bookmark-small.svg" />
+            <img className="jobs__bookmark" src="../img/Bookmark-small.svg" />
           </button>
           {formatDate(updatedAt)}
         </div>
