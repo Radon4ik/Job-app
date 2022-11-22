@@ -1,6 +1,7 @@
 const { resolve, join } = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+
 module.exports = (_, argv) => {
   const isDevelopment = argv.mode === 'development';
 
@@ -45,6 +46,10 @@ module.exports = (_, argv) => {
           generator: {
             filename: 'fonts/[hash][ext][query]',
           },
+        },
+        {
+          test: /\.html$/i,
+          loader: 'html-loader',
         },
       ],
     },
