@@ -1,5 +1,4 @@
 'use strict';
-
 import React, { useState, useEffect } from 'react';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import Details from './pages/Details';
