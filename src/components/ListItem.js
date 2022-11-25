@@ -4,6 +4,9 @@ import { formatDate } from '../utils/date';
 import React from 'react';
 import { nanoid } from 'nanoid';
 import { Link } from 'react-router-dom';
+import rating from '../img/Rating.svg';
+import bookmarkSmall from '../img/Bookmark-small.svg';
+import localList from '../img/LocationList.svg';
 
 const ListItem = ({
   id,
@@ -32,20 +35,20 @@ const ListItem = ({
             target="_blank"
             href={`https://www.google.com/maps/search/?api=1&query=${location.lat}%2C${location.long}`}
           >
-            <img className="job__location" src="../img/LocationList.svg" />
+            <img className="job__location" src={localList} />
             {address}
           </a>
         </div>
         <div className="jobs__rating">
-          <img className="jobs__star-rating" src="../img/Rating.svg" />
-          <img className="jobs__star-rating" src="../img/Rating.svg" />
-          <img className="jobs__star-rating" src="../img/Rating.svg" />
-          <img className="jobs__star-rating" src="../img/Rating.svg" />
-          <img className="jobs__star-rating" src="../img/Rating.svg" />
+          <img className="jobs__star-rating" src={rating} />
+          <img className="jobs__star-rating" src={rating} />
+          <img className="jobs__star-rating" src={rating} />
+          <img className="jobs__star-rating" src={rating} />
+          <img className="jobs__star-rating" src={rating} />
         </div>
         <div className="jobs__posted">
           <button className="jobs__btn">
-            <img className="jobs__bookmark" src="../img/Bookmark-small.svg" />
+            <img className="jobs__bookmark" src={bookmarkSmall} />
           </button>
           {formatDate(updatedAt)}
         </div>

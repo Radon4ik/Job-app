@@ -4,6 +4,10 @@ import { nanoid } from 'nanoid';
 import React, { useEffect, useState } from 'react';
 import { useParams, Link } from 'react-router-dom';
 import { HOST, TOKEN, apiRoutes } from '../contents/requestData';
+import bookmark from '../img/Bookmark.svg';
+import star from '../img/Star-small.svg';
+import share from '../img/Share.svg';
+import local from '../img/Location.svg';
 
 const Details = () => {
   const { id } = useParams();
@@ -56,23 +60,17 @@ const Details = () => {
                   <ul className="header__list">
                     <li className="header__item">
                       <button className="header__btn">
-                        <img
-                          className="header__img"
-                          src="../img/Bookmark.svg"
-                        />
+                        <img className="header__img" src={bookmark} />
                         Save to my list
                       </button>
                       <button className="header__btn header__btn--invisible">
-                        <img
-                          className="header__img"
-                          src="../img/Star-small.svg"
-                        />
+                        <img className="header__img" src={star} />
                         Save to my list
                       </button>
                     </li>
                     <li className="header__item">
                       <button className="header__btn header__btn-share">
-                        <img className="header__img" src="../img/Share.svg" />
+                        <img className="header__img" src={share} />
                         Share
                       </button>
                     </li>
@@ -82,16 +80,13 @@ const Details = () => {
                 <ul className="header__list-invisible">
                   <li className="header__item">
                     <button className="header__btn-invisible">
-                      <img
-                        className="header__img"
-                        src="../img/Star-small.svg"
-                      />
+                      <img className="header__img" src={star} />
                       Save to my list
                     </button>
                   </li>
                   <li className="header__item">
                     <button className="header__btn-share">
-                      <img className="header__img" src="../img/Share.svg" />
+                      <img className="header__img" src={share} />
                       Share
                     </button>
                   </li>
@@ -220,7 +215,7 @@ const Details = () => {
                     href={`https://www.google.com/maps/search/?api=1&query=${location.lat}%2C${location.long}`}
                     className="map__address"
                   >
-                    <img className="map__shape" src="../img/Location.svg" />
+                    <img className="map__shape" src={local} />
                     {address}
                   </a>
                   <br />
