@@ -63,10 +63,6 @@ const Details = () => {
                         <img className="header__img" src={bookmark} />
                         Save to my list
                       </button>
-                      <button className="header__btn header__btn--invisible">
-                        <img className="header__img" src={star} />
-                        Save to my list
-                      </button>
                     </li>
                     <li className="header__item">
                       <button className="header__btn header__btn-share">

@@ -53,9 +53,11 @@
     display: none;
   }
 }
-
 .header__list-invisible {
   display: none;
+}
+
+.header__list-invisible {
   @include media-992 {
     display: inherit;
     margin-bottom: 32px;
